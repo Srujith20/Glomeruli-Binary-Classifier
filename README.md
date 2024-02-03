@@ -30,14 +30,28 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 
 ## Machine Learning Models
 <a name="section-2"></a>
+| Feature                       | Logistic Regression      | Support Vector Machines  | Random Forest             | Convolutional Neural Networks (CNN) | Recurrent Neural Networks (RNN) |
+|-------------------------------|--------------------------|--------------------------|---------------------------|--------------------------------------|----------------------------------|
+| **Model Type**                | Linear Model             | Discriminative Model     | Ensemble Model            | Deep Learning Model                  | Deep Learning Model              |
+| **Interpretability**           | High                     | Medium                   | Medium                    | Low                                  | Low                              |
+| **Complexity**                | Low                      | Medium-High              | High                      | High                                 | High                             |
+| **Feature Importance**        | Yes (Coefficients)       | Yes (Support Vectors)    | Yes (Tree Importance)    | Yes (Learned Filters)               | Limited                          |
+| **Handling Non-Linearity**    | Limited                  | Yes                      | Yes                       | Yes                                  | Yes                              |
+| **Regularization**            | Yes                      | Yes                      | Yes                       | Yes                                  | Yes                              |
+| **Robustness to Noise**        | Moderate                 | High                     | High                      | High                                 | Moderate                         |
+| **Dataset Size Sensitivity**   | Moderate                 | High                     | Moderate-High             | High                                 | High                             |
+| **Hyperparameter Sensitivity** | Low                      | Moderate                 | Moderate                  | High                                 | High                             |
+| **Suitability for Image Data** | No                       | No                       | No                        | Yes                                  | No                               |
+| **Suitability for Time Series**| No                       | No                       | No                        | No                                   | Yes                              |
+| **Handling Imbalanced Data**   | May require adjustments | Can handle with C parameter| Can handle with class weights | May require adjustments            | May require adjustments          |
 
 ## Approach
 <a name="section-3"></a>
 ### Model Selection
 #### Convolution Neural Network(CNN)
-- Offers simple configuration [^1]
-- Offers possibility to import pre-trained models for partial setup [^1]
-- Eradicates the need to identify features [^1]
+- Offers simple configuration [1]
+- Offers possibility to import pre-trained models for partial setup [1]
+- Eradicates the need to identify features [1]
 - Offers dimensional reduction which reduces the computation load
 
 ### Model Development
@@ -53,11 +67,11 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 <a name="section-6"></a>
 
 ## Results
-<a name="section-7></a>
+<a name="section-7"></a>
 
 ## References
 <a name="section-8"></a>
-[^1] Gallego J, Pedraza A, Lopez S, Steiner G, Gonzalez L, Laurinavicius A, Bueno G. Glomerulus Classification and Detection Based on Convolutional Neural Networks. Journal of Imaging. 2018; 4(1):20. https://doi.org/10.3390/jimaging4010020 
+[1] Gallego J, Pedraza A, Lopez S, Steiner G, Gonzalez L, Laurinavicius A, Bueno G. Glomerulus Classification and Detection Based on Convolutional Neural Networks. Journal of Imaging. 2018; 4(1):20. https://doi.org/10.3390/jimaging4010020 
 
 ## Contact
 <a name="section-9"></a>
