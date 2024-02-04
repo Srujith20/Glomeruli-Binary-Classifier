@@ -74,19 +74,19 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 ## Performace Metrics
 <a name="section-5"></a>
 1. **Precision (Positive Predictive Value):**
-   - **Formula:** \(Precision = \frac{TP}{TP + FP}\)
+   - **Formula:** Precision = TP / (TP + FP)
    - **Interpretation:** Precision is the ratio of correctly identified sclerotic glomeruli to the total predicted sclerotic glomeruli. It is relevant when the cost of false positives (misclassifying a non-sclerotic glomerulus as sclerotic) is high.
 
 2. **Recall (Sensitivity, True Positive Rate):**
-   - **Formula:** \(Recall = \frac{TP}{TP + FN}\)
+   - **Formula:** Recall = TP / (TP + FN)
    - **Interpretation:** Recall is the ratio of correctly identified sclerotic glomeruli to the total actual sclerotic glomeruli. It is important when missing sclerotic glomeruli (false negatives) is costly, and you want to maximize the identification of all positive instances.
 
 3. **F1 Score:**
-   - **Formula:** \(F1 Score = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\)
+   - **Formula:** F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
    - **Interpretation:** The F1 Score is the harmonic mean of precision and recall. It provides a balance between precision and recall and is useful when there is an uneven class distribution.
 
 4. **Matthews Correlation Coefficient (MCC):**
-   - **Formula:** \(MCC = \frac{TP \times TN - FP \times FN}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}}\)
+   - **Formula:** MCC = (TP * TN - FP * FN) / sqrt((TP + FP) * (TP + FN) * (TN + FP) * (TN + FN))
    - **Interpretation:** MCC takes into account all four values in a confusion matrix and is particularly robust for imbalanced datasets. It ranges from -1 to +1, with 0 indicating no better than random chance.
 
 ## Dataset
