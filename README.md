@@ -49,15 +49,16 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 
 ## Published Digital Pathology ML Models
 <a name="section-3"></a>
-| Index | Paper                                                  | Method                               | Average Accuracy | Average F1 Score | MCC  | Split  |
-|-------|--------------------------------------------------------|--------------------------------------|-------------------|-------------------|------|--------|
-| 1     | Glomerulus Classification via an Improved GoogLeNet     | GoogLeNet-BN-Bayesian                | 95.04             | 93.66             | NA   | NA     |
-| 2     | Glomeruli Identification in Renal Biopsy using Deep Learning Approaches | CNN model of InceptionV3      | 96                | 96.78             | NA   | NA     |
-| 3     | A neural network for glomerulus classification based on histological images of kidney biopsy | ANN | 99.14 | NA   | 96.59 | NA     |
-| 4     | Glomerulus Classification and Detection Based on Convolutional Neural Networks | CNN on pre-trained AlexNet | 99.9 | 99.9 | NA   | NA     |
-| 5     | Semantic Segmentation Framework for Glomeruli Detection and Classification in Kidney Histological Sections | CNN on SegNet and DeepLab v3+ | NA | NA | NA   | NA     |
-| 6     | Classification of glomerular hypercellularity using convolutional features and support vector machine | CNN-MLP | 99.5 | 99.6 | NA   | 80/20  |
-| 7     | Classification of glomerular hypercellularity using convolutional features and support vector machine | CNN-SVM | 99.6 | 99.6 | NA   | 80/20  |
+| Index | Paper                                                  | Method                               | Stain | μPrecision | μRecall | μF1 Score        | MCC           | Split  |
+|-------|--------------------------------------------------------|--------------------------------------|-------|------------|---------|------------------|---------------|--------|
+| I     | [2] (#ref-2)                                                   | ANN                                  | PAS   | 0.9844(±0.0111) | 0.9310(±0.0153) | NA         | 0.95(±0.01)  | NA     |
+| II    | [3]                                                    | CNN on SegNet                       | PAS   | NA         | NA      | 0.69             | NA            | NA     |
+| III   | [3]                                                    | CNN on DeepLab v3+                   | PAS   | NA         | NA      | 0.63             | NA            | NA     |
+| IV    | [4]                                                    | CNN-MLP                              | H&E and PAS | 0.995(±0.008) | 0.994(±0.009) | 0.996(±0.006) | NA           | 80/20  |
+| V     | [4]                                                    | CNN-SVM                              | H&E and PAS | 0.996(±0.006) | 0.996(±0.007) | 0.996(±0.003) | NA           | 80/20  |
+| VI    | [5]                                                    | GoogLeNet-BN-Bayesian                | NA    | NA         | NA      | 0.9366(±7.82)   | NA            | NA     |
+| VII   | [6]                                                    | CNN model of InceptionV3             | NA    | 0.9830     | NA      | 0.9678           | NA            | NA     |
+
 
 ## Approach
 <a name="section-4"></a>
@@ -105,29 +106,22 @@ CNN     &nbsp; Convolutional Neural Networks
 LSTM NN &nbsp; Long Short Term Memory Neural Network  
 PAS     &nbsp; Periodic Acid Schiff  
 MCC     &nbsp; Matthews Correlation Coefficient  
+BN      &nbsp; Batch Normalization
 NA      &nbsp; Not Available 
 
 ## Reference
 <a name="section-10"></a>
 [1] Gallego J, Pedraza A, Lopez S, Steiner G, Gonzalez L, Laurinavicius A, Bueno G. Glomerulus Classification and Detection Based on Convolutional Neural Networks. Journal of Imaging. 2018; 4(1):20. https://doi.org/10.3390/jimaging4010020
 
-[2] Cascarano GD, Debitonto FS, Lemma R, et al. A neural network for glomerulus classification based on histological images of kidney biopsy. BMC Med Inform Decis Mak. 2021;21(Suppl 1):300. Published 2021 Nov 1. https://doi:10.1186/s12911-021-01650-3
+[2] <a name="ref-2"></a>Cascarano GD, Debitonto FS, Lemma R, et al. A neural network for glomerulus classification based on histological images of kidney biopsy. BMC Med Inform Decis Mak. 2021;21(Suppl 1):300. Published 2021 Nov 1. https://doi:10.1186/s12911-021-01650-3
 
-[3] Yamaguchi R, Kawazoe Y, Shimamoto K, et al. Glomerular Classification Using Convolutional Neural Networks Based on Defined Annotation Criteria and Concordance Evaluation Among Clinicians. Kidney Int Rep. 2020;6(3):716-726. Published 2020 Dec 13. https://doi:10.1016/j.ekir.2020.11.037
+[3] Altini N, Cascarano GD, Brunetti A, Marino F, Rocchetti MT, Matino S, Venere U, Rossini M, Pesce F, Gesualdo L, et al. Semantic Segmentation Framework for Glomeruli Detection and Classification in Kidney Histological Sections. Electronics. 2020; 9(3):503. https://doi.org/10.3390/electronics9030503
 
-[4] Altini N, Cascarano GD, Brunetti A, Marino F, Rocchetti MT, Matino S, Venere U, Rossini M, Pesce F, Gesualdo L, et al. Semantic Segmentation Framework for Glomeruli Detection and Classification in Kidney Histological Sections. Electronics. 2020; 9(3):503. https://doi.org/10.3390/electronics9030503
+[4] Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. https://doi:10.1016/j.artmed.2020.101808
 
-[5] Uchino E, Suzuki K, Sato N, et al. Classification of glomerular pathological findings using deep learning and nephrologist–AI collective intelligence approach. medRxiv (Cold Spring Harbor Laboratory). January 2020. https://doi:10.1101/2019.12.30.19016162
+[5] Yao X, Wang X, Karaca Y, Xie J, Wang S. Glomerulus classification via an improved GoogLeNet. IEEE Access. 2020;8:176916-176923. https://doi:10.1109/access.2020.3026567
 
-[6] Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. https://doi:10.1016/j.artmed.2020.101808
-
-[7] Yao X, Wang X, Karaca Y, Xie J, Wang S. Glomerulus classification via an improved GoogLeNet. IEEE Access. 2020;8:176916-176923. https://doi:10.1109/access.2020.3026567
-
-[8] Yang CK, Lee CY, Wang HS, et al. Glomerular disease classification and lesion identification by machine learning. Biomed J. 2022;45(4):675-685. https://doi:10.1016/j.bj.2021.08.011
-
-[9] Uchino E, Suzuki K, Sato N, et al. Classification of glomerular pathological findings using deep learning and nephrologist–AI collective intelligence approach. International Journal of Medical Informatics. 2020;141:104231. https://doi:10.1016/j.ijmedinf.2020.104231
-
-[10] Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. https://doi:10.1016/j.artmed.2020.101808
+[6] Varalakshmi P, Saroja S, Ketharaman S, Shimola S. Glomeruli Identification in Renal Biopsy using Deep Learning Approaches. 2022 International Conference on Innovative Computing, Intelligent Communication and Smart Electrical Systems (ICSES). July 2022. https://doi:10.1109/icses55317.2022.9914279
 
 ## Contact
 <a name="section-11"></a>
