@@ -96,19 +96,23 @@ NA      &nbsp; Not Available
 <a name="section-10"></a>
 [1] Gallego J, Pedraza A, Lopez S, Steiner G, Gonzalez L, Laurinavicius A, Bueno G. Glomerulus Classification and Detection Based on Convolutional Neural Networks. Journal of Imaging. 2018; 4(1):20. https://doi.org/10.3390/jimaging4010020
 
-[2] Cascarano GD, Debitonto FS, Lemma R, et al. A neural network for glomerulus classification based on histological images of kidney biopsy. BMC Med Inform Decis Mak. 2021;21(Suppl 1):300. Published 2021 Nov 1. doi:10.1186/s12911-021-01650-3
+[2] Cascarano GD, Debitonto FS, Lemma R, et al. A neural network for glomerulus classification based on histological images of kidney biopsy. BMC Med Inform Decis Mak. 2021;21(Suppl 1):300. Published 2021 Nov 1. https://doi:10.1186/s12911-021-01650-3
 
-[3] Yamaguchi R, Kawazoe Y, Shimamoto K, et al. Glomerular Classification Using Convolutional Neural Networks Based on Defined Annotation Criteria and Concordance Evaluation Among Clinicians. Kidney Int Rep. 2020;6(3):716-726. Published 2020 Dec 13. doi:10.1016/j.ekir.2020.11.037
+[3] Yamaguchi R, Kawazoe Y, Shimamoto K, et al. Glomerular Classification Using Convolutional Neural Networks Based on Defined Annotation Criteria and Concordance Evaluation Among Clinicians. Kidney Int Rep. 2020;6(3):716-726. Published 2020 Dec 13. https://doi:10.1016/j.ekir.2020.11.037
 
 [4] Altini N, Cascarano GD, Brunetti A, Marino F, Rocchetti MT, Matino S, Venere U, Rossini M, Pesce F, Gesualdo L, et al. Semantic Segmentation Framework for Glomeruli Detection and Classification in Kidney Histological Sections. Electronics. 2020; 9(3):503. https://doi.org/10.3390/electronics9030503
 
-[5] Uchino E, Suzuki K, Sato N, et al. Classification of glomerular pathological findings using deep learning and nephrologist–AI collective intelligence approach. medRxiv (Cold Spring Harbor Laboratory). January 2020. doi:10.1101/2019.12.30.19016162
+[5] Uchino E, Suzuki K, Sato N, et al. Classification of glomerular pathological findings using deep learning and nephrologist–AI collective intelligence approach. medRxiv (Cold Spring Harbor Laboratory). January 2020. https://doi:10.1101/2019.12.30.19016162
 
-[6] Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. doi:10.1016/j.artmed.2020.101808
+[6] Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. https://doi:10.1016/j.artmed.2020.101808
 
-[7] Yao X, Wang X, Karaca Y, Xie J, Wang S. Glomerulus classification via an improved GoogLeNet. IEEE Access. 2020;8:176916-176923. doi:10.1109/access.2020.3026567
+[7] Yao X, Wang X, Karaca Y, Xie J, Wang S. Glomerulus classification via an improved GoogLeNet. IEEE Access. 2020;8:176916-176923. https://doi:10.1109/access.2020.3026567
 
-[8] Yang CK, Lee CY, Wang HS, et al. Glomerular disease classification and lesion identification by machine learning. Biomed J. 2022;45(4):675-685. doi:10.1016/j.bj.2021.08.011
+[8] Yang CK, Lee CY, Wang HS, et al. Glomerular disease classification and lesion identification by machine learning. Biomed J. 2022;45(4):675-685. https://doi:10.1016/j.bj.2021.08.011
+
+[9] Uchino E, Suzuki K, Sato N, et al. Classification of glomerular pathological findings using deep learning and nephrologist–AI collective intelligence approach. International Journal of Medical Informatics. 2020;141:104231. https://doi:10.1016/j.ijmedinf.2020.104231
+
+[10] Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. https://doi:10.1016/j.artmed.2020.101808
 
 ## Contact
 <a name="section-11"></a>
