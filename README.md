@@ -60,7 +60,7 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 ## Approach
 <a name="section-4"></a>
 ### Model Selection
-#### Convolution Neural Network(CNN)
+#### CNN MODEL OF INCEPTION V3
 - Offers simple configuration [1](#ref-1)
 - Offers possibility to import pre-trained models for partial setup [1](#ref-1)
 - Eradicates the need to identify features [1](#ref-1)
@@ -89,7 +89,7 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 
 ### Metric Selected
 **F1 Score**
-To maintain balance between precision and recall
+- To maintain balance between precision and recall
 
 ## Dataset
 <a name="section-6"></a>
@@ -102,15 +102,15 @@ To maintain balance between precision and recall
 
 ## Abbreviations
 <a name="section-9"></a>
-ANN     &nbsp; Artificial neural networks  
-CNN     &nbsp; Convolutional Neural Networks  
-LSTM NN &nbsp; Long Short Term Memory Neural Network  
-PAS     &nbsp; Periodic Acid Schiff  
-MCC     &nbsp; Matthews Correlation Coefficient  
-BN      &nbsp; Batch Normalization
-MLP     &nbsp; Multilayer Perceptron
-μ       &nbsp; Average
-NA      &nbsp; Not Available 
+- **ANN**: Artificial Neural Networks
+- **CNN**: Convolutional Neural Networks
+- **LSTM NN**: Long Short Term Memory Neural Network
+- **PAS**: Periodic Acid Schiff
+- **MCC**: Matthews Correlation Coefficient
+- **BN**: Batch Normalization
+- **MLP**: Multilayer Perceptron
+- **μ**: Average
+- **NA**: Not Available
 
 ## References
 <a name="section-10"></a>
