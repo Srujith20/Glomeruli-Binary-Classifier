@@ -85,12 +85,12 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 
 ## Abbreviations
 <a name="section-9"></a>
-ANN	     Artificial neural networks
-CNN      Convolutional Neural Networks
-LSTM NN  Long Short Term Memory Neural Network
-PAS	     Periodic Acid Schiff
-MCC      Matthews Correlation Coefficient
-NA       Not Available
+ANN     &nbsp; Artificial neural networks  
+CNN     &nbsp; Convolutional Neural Networks  
+LSTM NN &nbsp; Long Short Term Memory Neural Network  
+PAS     &nbsp; Periodic Acid Schiff  
+MCC     &nbsp; Matthews Correlation Coefficient  
+NA      &nbsp; Not Available 
 
 ## Reference
 <a name="section-10"></a>
