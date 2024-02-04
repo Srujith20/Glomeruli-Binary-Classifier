@@ -67,7 +67,7 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 - Offers dimensional reduction which reduces the computation load
 
 ### Model Development
-![Beige Colorful Minimal Flowchart Infographic Graph](https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/37334fe4-68bf-4ac2-b483-07cc10e829ac)
+<img width="919" alt="Screenshot 2024-02-04 at 3 40 18 AM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/a67f6dd6-3741-4aff-b6cb-28c4a5503c84">
 
 ## Performace Metrics
 <a name="section-5"></a>
