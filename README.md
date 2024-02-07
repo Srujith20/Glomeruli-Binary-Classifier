@@ -8,10 +8,17 @@ Welcome to the repository containing the code and resources for a machine learni
 - [Approach](#section-4)
 - [Performance Metrics](#section-5)
 - [Dataset](#section-6)
-- [Installation](#section-7)
-- [Results](#section-8)
-- [Abbreviations](#section-9)
-- [References](#section-10)
+- [Environment Specifications](#section-7)
+- [Running Setup](#section-8)
+- [Data Preprocessing](#section-9)
+- [Model Selection](#section-10)
+- [Defining Model](#section-11)
+- [Training Model](#section-12)
+- [Fine Tuning](#section-13)
+- [Testing and Performance](#section-14)
+- [Results](#section-15)
+- [Abbreviations](#section-16)
+- [References](#section-17)
 
 ## Medical Context
 <a name="section-1"></a>
@@ -45,10 +52,8 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 | I     | [2](#ref-2)                                                   | ANN                                  | PAS   | 0.9844(±0.0111) | 0.9310(±0.0153) | NA         | 0.95(±0.01)  | NA     |
 | II    | [3](#ref-3)                                                    | CNN on SegNet                       | PAS   | NA         | NA      | 0.69             | NA            | NA     |
 | III   | [3](#ref-3)                                                   | CNN on DeepLab v3+                   | PAS   | NA         | NA      | 0.63             | NA            | NA     |
-| IV    | [4](#ref-4)                                                    | CNN-MLP                              | H&E and PAS | 0.995(±0.008) | 0.994(±0.009) | 0.996(±0.006) | NA           | 80/20  |
-| V     | [4](#ref-4)                                                    | CNN-SVM                              | H&E and PAS | 0.996(±0.006) | 0.996(±0.007) | 0.996(±0.003) | NA           | 80/20  |
-| VI    | [5](#ref-5)                                                    | GoogLeNet-BN-Bayesian                | NA    | NA         | NA      | 0.9366(±7.82)   | NA            | NA     |
-| VII   | [6](#ref-6)                                                    | CNN model of InceptionV3             | NA    | 0.9830     | NA      | 0.9678           | NA            | NA     |
+| IV    | [4](#ref-4)                                                    | GoogLeNet-BN-Bayesian                | NA    | NA         | NA      | 0.9366(±7.82)   | NA            | NA     |
+| V   | [5](#ref-5)                                                    | CNN model of InceptionV3             | NA    | 0.9830     | NA      | 0.9678           | NA            | NA     |
 
 ## Approach
 <a name="section-4"></a>
@@ -80,10 +85,6 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
    - **Formula:** MCC = (TP * TN - FP * FN) / sqrt((TP + FP) * (TP + FN) * (TN + FP) * (TN + FN))
    - **Interpretation:** MCC takes into account all four values in a confusion matrix and is particularly robust for imbalanced datasets. It ranges from -1 to +1, with 0 indicating no better than random chance.
 
-### Metric Selected
-**F1 Score**
-- To maintain balance between precision and recall
-
 ## Dataset
 <a name="section-6"></a>
 | Image Type             | Count       |
@@ -91,14 +92,49 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 | Globally Sclerotic     | 1504        |
 | Non-Globally Sclerotic | 4704        |
 
-## Installation
+## Enviroment Specification
 <a name="section-7"></a>
+- Environment: Google Colab
+- Hardware Accelerator: T4 GPU
+- Data Storage: Google Drive
+
+## Running Setup
+<a name="section-8"></a>
+## Running Setup
+1. Open Google Drive
+2. Upload the published and unpublished folders containing images
+3. Open Google Colab(Google Drive and Colab must be associated with the same account)
+4. Change the Runtime type to T4 GPU(preferably A100 GPU or V100 GPU)
+
+## Data Preprocessing
+<a name="section-9"></a>
+- Downloaded Data
+- Split data into train(70%), test(15%) and validate(15%) folders
+- Each folder above contains both globally_scloretic and non_globally_scloretic folders as classes with images count depending on the aforementioned split on their original folders
+- Configured the dataset for performance by utilising buffered prefetching for loading images from disc without causing I/O blocks
+- Augmented data to introduce diveristy by applying realistic transformations to reduce overfitting
+- Rescaled pixel values to suit the pretrained models
+
+## Model Selection
+<a name="section-10"></a>
+
+## Defining Model
+<a name="section-11"></a>
+
+## Training Model
+<a name="section-12"></a>
+
+## Fine Tuning
+<a name="section-13"></a>
+
+## Testing and performace
+<a name="section-13"></a>
 
 ## Results
-<a name="section-8"></a>
+<a name="section-15"></a>
 
 ## Abbreviations
-<a name="section-9"></a>
+<a name="section-16"></a>
 - **ANN**: Artificial Neural Networks
 - **CNN**: Convolutional Neural Networks
 - **LSTM NN**: Long Short Term Memory Neural Network
@@ -110,15 +146,13 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 - **NA**: Not Available
 
 ## References
-<a name="section-10"></a>
+<a name="section-17"></a>
 [1]<a name="ref-1"></a> Gallego J, Pedraza A, Lopez S, Steiner G, Gonzalez L, Laurinavicius A, Bueno G. Glomerulus Classification and Detection Based on Convolutional Neural Networks. Journal of Imaging. 2018; 4(1):20. doi.org/10.3390/jimaging4010020
 
 [2]<a name="ref-2"></a>Cascarano GD, Debitonto FS, Lemma R, et al. A neural network for glomerulus classification based on histological images of kidney biopsy. BMC Med Inform Decis Mak. 2021;21(Suppl 1):300. Published 2021 Nov 1. doi:10.1186/s12911-021-01650-3
 
 [3]<a name="ref-3"></a> Altini N, Cascarano GD, Brunetti A, Marino F, Rocchetti MT, Matino S, Venere U, Rossini M, Pesce F, Gesualdo L, et al. Semantic Segmentation Framework for Glomeruli Detection and Classification in Kidney Histological Sections. Electronics. 2020; 9(3):503. doi.org/10.3390/electronics9030503
 
-[4]<a name="ref-4"></a> Chagas P, De Souza LC, Araújo I, et al. Classification of glomerular hypercellularity using convolutional features and support vector machine. Artificial Intelligence in Medicine. 2020;103:101808. doi:10.1016/j.artmed.2020.101808
+[4]<a name="ref-4"></a> Yao X, Wang X, Karaca Y, Xie J, Wang S. Glomerulus classification via an improved GoogLeNet. IEEE Access. 2020;8:176916-176923. doi:10.1109/access.2020.3026567
 
-[5]<a name="ref-5"></a> Yao X, Wang X, Karaca Y, Xie J, Wang S. Glomerulus classification via an improved GoogLeNet. IEEE Access. 2020;8:176916-176923. doi:10.1109/access.2020.3026567
-
-[6]<a name="ref-6"></a> Varalakshmi P, Saroja S, Ketharaman S, Shimola S. Glomeruli Identification in Renal Biopsy using Deep Learning Approaches. 2022 International Conference on Innovative Computing, Intelligent Communication and Smart Electrical Systems (ICSES). July 2022. doi:10.1109/icses55317.2022.9914279
+[5]<a name="ref-5"></a> Varalakshmi P, Saroja S, Ketharaman S, Shimola S. Glomeruli Identification in Renal Biopsy using Deep Learning Approaches. 2022 International Conference on Innovative Computing, Intelligent Communication and Smart Electrical Systems (ICSES). July 2022. doi:10.1109/icses55317.2022.9914279
