@@ -100,7 +100,6 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Running Setup
 <a name="section-8"></a>
-## Running Setup
 1. Open Google Drive
 2. Upload the published and unpublished folders containing images
 3. Open Google Colab(Google Drive and Colab must be associated with the same account)
@@ -109,7 +108,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Data Preprocessing
 <a name="section-9"></a>
 - Downloaded Data
-- Split data into train(70%), test(15%) and validate(15%) folders
+- Split the entire data into train(70%), test(15%) and validate(15%) folders
 - Each folder above contains both globally_scloretic and non_globally_scloretic folders as classes with images count depending on the aforementioned split on their original folders
 - Configured the dataset for performance by utilising buffered prefetching for loading images from disc without causing I/O blocks
 - Augmented data to introduce diveristy by applying realistic transformations to reduce overfitting
@@ -117,12 +116,21 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Model Selection
 <a name="section-10"></a>
+- A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli wasUp sampled from original dataset for training purposes. A sample testing folder consisting of a mixture of both with a count of 50 was also sampled.
+- Two pretrained CNN models were considered for transfer learning and fine tuning:
+  1. MobileNetV2
+  2. InceptionV3
+- The following were the results of training and testing the model using sampled training and testing data before and after fine tuning:
 
 ## Defining Model
 <a name="section-11"></a>
+- Input Image Shape = [160, 160, 3]
+- Batch Size = 32
+- Loaded --------- ,since showed better results in the terms of the selected metric
 
 ## Training Model
 <a name="section-12"></a>
+- Freezed the convolutional base
 
 ## Fine Tuning
 <a name="section-13"></a>
