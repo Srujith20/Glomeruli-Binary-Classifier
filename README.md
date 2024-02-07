@@ -83,7 +83,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
    - **Interpretation:** The F1 Score is the harmonic mean of precision and recall. It provides a balance between precision and recall and is useful when there is an uneven class distribution.
   
 ### Metric Selection
-#### Influencing Factors
+**Influencing Factors**
 **False Positive Results**: Low precision leads to a higher number of false positives, where the model incorrectly identifies individuals as having a disease or condition when they do not. This can result in unnecessary anxiety and stress for patients, as well as unnecessary follow-up tests, treatments, or interventions. 
 
 **False Negative Results**: Low recall results in a higher number of false negatives, where the model fails to identify individuals who actually have a disease or condition. This can lead to missed diagnoses, delayed treatment, and progression of the disease, potentially resulting in poorer patient outcomes and decreased quality of life.
@@ -128,10 +128,11 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
   1. MobileNetV2
   2. InceptionV3
 - The following were the results of training and testing the model using sampled training and testing data before and after fine tuning:
+
 | Model        | Precision | Accuracy | F1 Score |
 |--------------|-----------|----------|----------|
 | MobileNetV2  |   0.65    |   0.68   |   0.66   |
-| InceptionV3  |   0.5    |   0.5   |   0.5   |
+| InceptionV3  |   0.5     |   0.5    |   0.5    |
 
 - Since the **MobileNetV2** perforemed better than **InceptionV3**, it has been chose as the model for the binary classification.
 
@@ -139,7 +140,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 <a name="section-11"></a>
 - Input Image Shape = [160, 160, 3]
 - Batch Size = 32
-- Loaded --------- ,since showed better results in the terms of the selected metric
+- Loaded MobileNetV2 ,since showed better results in the terms of the F1 score on sampled data
 
 ## Training Model
 <a name="section-12"></a>
