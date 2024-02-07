@@ -57,19 +57,20 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Approach
 <a name="section-4"></a>
-### Model Selection
+### Intial Model Selection 
 #### CNN MODEL OF INCEPTION V3
 - Offers simple configuration [1](#ref-1)
 - Offers possibility to import pre-trained models for partial setup [1](#ref-1)
 - Eradicates the need to identify features [1](#ref-1)
 - Offers dimensional reduction which reduces the computation load
+- Showed a better μF1 Score compared to other models in the published models above
 
 ### Model Development
 <img width="919" alt="Screenshot 2024-02-04 at 3 40 18 AM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/a67f6dd6-3741-4aff-b6cb-28c4a5503c84">
 
-## Performace Metrics
+## Evaluation Metrics
 <a name="section-5"></a>
-###Definitions
+### Definitions
 1. **Precision (Positive Predictive Value):**
    - **Formula:** Precision = TP / (TP + FP)
    - **Interpretation:** Precision is the ratio of correctly identified sclerotic glomeruli to the total predicted sclerotic glomeruli. It is relevant when the cost of false positives (misclassifying a non-sclerotic glomerulus as sclerotic) is high.
@@ -145,9 +146,16 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Training Model
 <a name="section-12"></a>
 - Freezed the convolutional base
+- Added gloabl average pooling to feature maps which resulted in single 1280-element vector per image in the batch
+- Added dense layer which sets to 1, indicating that it will produce a single prediction value per image in the batch
+- Compiled the model
+- Ran the model to fit the dataset
+- Evaluaed the training and validation accuracy/loss
 
 ## Fine Tuning
 <a name="section-13"></a>
+- Unfreezed the base model to force the weights to be tuned from generic feature maps to features associated specifically with the dataset
+- Compiled and ran the model model again
 
 ## Testing and performace
 <a name="section-13"></a>
