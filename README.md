@@ -21,13 +21,6 @@ Sclerotic glomeruli refer to a condition where the glomerulus, a tiny blood vess
 ### Non-sclerotic Glomeruli
 Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hardening and scarring characteristic of sclerosis. Understanding the differences between sclerotic and non-sclerotic glomeruli is crucial in the medical domain for accurate diagnosis and treatment planning.
 
-### Sclerotic Glomeruli Types
-#### Globally Sclerotic Glomeruli
-Globally sclerotic glomeruli are characterized by complete and diffuse hardening and scarring of the entire glomerulus. This type of sclerosis often indicates advanced renal damage, requiring careful management and intervention in clinical settings.
-
-#### Non-Globally Sclerotic Glomeruli
-In contrast, non-globally sclerotic glomeruli exhibit partial or localized hardening and scarring within the glomerulus. Understanding the specific patterns and distribution of sclerosis in non-globally sclerotic glomeruli is essential for a more nuanced diagnosis and targeted treatment approaches.
-
 ## Machine Learning Models
 <a name="section-2"></a>
 | Feature                       | Logistic Regression      | Support Vector Machines  | Random Forest             | Convolutional Neural Networks (CNN) | Recurrent Neural Networks (RNN) |
@@ -93,6 +86,10 @@ In contrast, non-globally sclerotic glomeruli exhibit partial or localized harde
 
 ## Dataset
 <a name="section-6"></a>
+| Image Type             | Count       |
+|------------------------|-------------|
+| Globally Sclerotic     | 1504        |
+| Non-Globally Sclerotic | 4704        |
 
 ## Installation
 <a name="section-7"></a>
