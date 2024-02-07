@@ -6,7 +6,7 @@ Welcome to the repository containing the code and resources for a machine learni
 - [Machine Learning Models](#section-2)
 - [Published Digital Pathology ML Models](#section-3)
 - [Approach](#section-4)
-- [Performance Metrics](#section-5)
+- [Evalutaion Metrics](#section-5)
 - [Dataset](#section-6)
 - [Environment Specifications](#section-7)
 - [Running Setup](#section-8)
@@ -47,13 +47,13 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Published Digital Pathology ML Models
 <a name="section-3"></a>
-| Index | Paper                                                  | Method                               | Stain | μPrecision | μRecall | μF1 Score        | MCC           | Split  |
-|-------|--------------------------------------------------------|--------------------------------------|-------|------------|---------|------------------|---------------|--------|
-| I     | [2](#ref-2)                                                   | ANN                                  | PAS   | 0.9844(±0.0111) | 0.9310(±0.0153) | NA         | 0.95(±0.01)  | NA     |
-| II    | [3](#ref-3)                                                    | CNN on SegNet                       | PAS   | NA         | NA      | 0.69             | NA            | NA     |
-| III   | [3](#ref-3)                                                   | CNN on DeepLab v3+                   | PAS   | NA         | NA      | 0.63             | NA            | NA     |
-| IV    | [4](#ref-4)                                                    | GoogLeNet-BN-Bayesian                | NA    | NA         | NA      | 0.9366(±7.82)   | NA            | NA     |
-| V   | [5](#ref-5)                                                    | CNN model of InceptionV3             | NA    | 0.9830     | NA      | 0.9678           | NA            | NA     |
+| Index | Paper                                                  | Method                               | Stain | μF1 Score        |
+|-------|--------------------------------------------------------|--------------------------------------|-------|------------------|
+| I     | [2](#ref-2)                                                   | ANN                                  | PAS   |  0.9310(±0.0153) |
+| II    | [3](#ref-3)                                                    | CNN on SegNet                       | PAS   |  0.69             | 
+| III   | [3](#ref-3)                                                   | CNN on DeepLab v3+                   | PAS   |  0.63             |    
+| IV    | [4](#ref-4)                                                    | GoogLeNet-BN-Bayesian                | PAS  | 0.9366(±7.82)   |      
+| V   | [5](#ref-5)                                                    | CNN model of InceptionV3             | PAS    |  0.9678           |    
 
 ## Approach
 <a name="section-4"></a>
@@ -69,6 +69,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Performace Metrics
 <a name="section-5"></a>
+###Definitions
 1. **Precision (Positive Predictive Value):**
    - **Formula:** Precision = TP / (TP + FP)
    - **Interpretation:** Precision is the ratio of correctly identified sclerotic glomeruli to the total predicted sclerotic glomeruli. It is relevant when the cost of false positives (misclassifying a non-sclerotic glomerulus as sclerotic) is high.
@@ -80,10 +81,16 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 3. **F1 Score:**
    - **Formula:** F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
    - **Interpretation:** The F1 Score is the harmonic mean of precision and recall. It provides a balance between precision and recall and is useful when there is an uneven class distribution.
+  
+### Metric Selection
+#### Influencing Factors
+**False Positive Results**: Low precision leads to a higher number of false positives, where the model incorrectly identifies individuals as having a disease or condition when they do not. This can result in unnecessary anxiety and stress for patients, as well as unnecessary follow-up tests, treatments, or interventions. 
 
-4. **Matthews Correlation Coefficient (MCC):**
-   - **Formula:** MCC = (TP * TN - FP * FN) / sqrt((TP + FP) * (TP + FN) * (TN + FP) * (TN + FN))
-   - **Interpretation:** MCC takes into account all four values in a confusion matrix and is particularly robust for imbalanced datasets. It ranges from -1 to +1, with 0 indicating no better than random chance.
+**False Negative Results**: Low recall results in a higher number of false negatives, where the model fails to identify individuals who actually have a disease or condition. This can lead to missed diagnoses, delayed treatment, and progression of the disease, potentially resulting in poorer patient outcomes and decreased quality of life.
+
+- Hence, it is essential to maintain balance between the aforementioned factors. 
+
+- F1 score satisfies the requirement and hence it was selected as the evalutaion metric.
 
 ## Dataset
 <a name="section-6"></a>
@@ -116,11 +123,17 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Model Selection
 <a name="section-10"></a>
-- A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli wasUp sampled from original dataset for training purposes. A sample testing folder consisting of a mixture of both with a count of 50 was also sampled.
+- A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli was sampled from original dataset for testing to select model. 
 - Two pretrained CNN models were considered for transfer learning and fine tuning:
   1. MobileNetV2
   2. InceptionV3
 - The following were the results of training and testing the model using sampled training and testing data before and after fine tuning:
+| Model        | Precision | Accuracy | F1 Score |
+|--------------|-----------|----------|----------|
+| MobileNetV2  |   0.65    |   0.68   |   0.66   |
+| InceptionV3  |   0.5    |   0.5   |   0.5   |
+
+- Since the **MobileNetV2** perforemed better than **InceptionV3**, it has been chose as the model for the binary classification.
 
 ## Defining Model
 <a name="section-11"></a>
