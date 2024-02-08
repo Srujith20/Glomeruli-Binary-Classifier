@@ -205,16 +205,16 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Testing and Evaluation 
 <a name="section-13"></a>
 
-###Testing Results
+### Testing Results
 <img width="855" alt="Screenshot 2024-02-07 at 8 24 31 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/16afd853-6b7a-433d-adf4-0eb2f84c4050">
 
-###Evalutaion
+### Evalutaion
 
-####Confusion Matrix
+#### Confusion Matrix
 - The false positives for sclerotic can be attributed to lack of enough data
 <img width="550" alt="Screenshot 2024-02-07 at 8 26 38 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/f9c0681d-1c86-4f38-a8e6-edcaad63dbe6">
 
-####Metrics
+#### Metrics
 <img width="260" alt="Screenshot 2024-02-07 at 8 28 28 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/b0c1faf2-7486-4168-b668-1b4c2276a92d">
 
 ## Results
