@@ -18,7 +18,8 @@ Welcome to the repository containing the code and resources for a machine learni
 - [Testing and Performance](#section-14)
 - [Results](#section-15)
 - [Abbreviations](#section-16)
-- [References](#section-17)
+- [Resources](#section-17)
+- [References](#section-18)
 
 ## Medical Context
 <a name="section-1"></a>
@@ -181,6 +182,12 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 - Compiled the model
 - Ran the model to fit the dataset
 - Evaluaed the training and validation accuracy/loss
+  
+### Training Evaluation Graphs 
+
+- The validation metrics are better becasue the internal layers like batch normalization affect accuracy during training
+  
+<img width="919" alt="Screenshot 2024-02-07 at 8 06 08 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/3d597377-fc4c-4705-881c-d462c613fea3">
 
 ## Fine Tuning
 <a name="section-13"></a>
@@ -205,8 +212,12 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 - **μ**: Average
 - **NA**: Not Available
 
-## References
+## Resources
 <a name="section-17"></a>
+https://www.tensorflow.org/tutorials
+
+## References
+<a name="section-18"></a>
 [1]<a name="ref-1"></a> Gallego J, Pedraza A, Lopez S, Steiner G, Gonzalez L, Laurinavicius A, Bueno G. Glomerulus Classification and Detection Based on Convolutional Neural Networks. Journal of Imaging. 2018; 4(1):20. doi.org/10.3390/jimaging4010020
 
 [2]<a name="ref-2"></a>Cascarano GD, Debitonto FS, Lemma R, et al. A neural network for glomerulus classification based on histological images of kidney biopsy. BMC Med Inform Decis Mak. 2021;21(Suppl 1):300. Published 2021 Nov 1. doi:10.1186/s12911-021-01650-3
