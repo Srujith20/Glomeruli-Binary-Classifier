@@ -130,7 +130,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
     - **original_sclerotic_data_dir:** Point to folder containing **globally_sclerotic** images
     - **original_non_sclerotic_data_dir:** Point to folder containing **non_globally_sclerotic** images
 10. Click **Run all** under **Run Time**
-11. The model will be saved to the root of the Drive under the name **mobilenetv2_glomeruli_classifier**
+11. The model will be saved to the root of the Drive under the name **inceptionv3_glomeruli_classifier**
 
 ### Test using the generated model
 
@@ -160,16 +160,16 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Model Selection
 <a name="section-10"></a>
-- A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli was sampled from original dataset for testing to select model. 
-- InceptionV3 was considered for transfer learning and fine tuning:
+- A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli was sampled from original dataset for testing to select model 
+- InceptionV3 was considered for transfer learning and fine tuning
 - The following were the results of training and testing the model using sampled training and testing data before and after fine tuning:
 
 | Model        | Precision | Accuracy | F1 Score |
 |--------------|-----------|----------|----------|
 | InceptionV3  |   0.5     |   0.5    |   0.5    |
 
-- Proceeded with model as the result was decent on a small dataset
-- The results of the sample traning for **InceptionV3** can be obtained from **TransferLearningBinaryClassifier_2.ipynb(Corresponds to InceptionV3)** notebook.
+- Proceeded with the model as the result was decent on a small dataset
+- The results of the sample traning for **InceptionV3** can be obtained from **TransferLearningBinaryClassifier_2.ipynb(Corresponds to InceptionV3)** notebook
 - Alternate approach has also been tried using **MobileNetV2** and the results can be obtained from **TransferLearningBinaryClassifier_2.ipynb** notebook. The alternate approach will used in the future if the **InceptionV3** does not show improvement with time 
 
 ## Defining Model
