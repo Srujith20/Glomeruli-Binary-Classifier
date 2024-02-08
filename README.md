@@ -221,6 +221,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 <a name="section-15"></a>
 #### Metrics
 <img width="260" alt="Screenshot 2024-02-07 at 8 28 28 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/b0c1faf2-7486-4168-b668-1b4c2276a92d">
+
 - Further addition of layers, data may help in improving the F1 score
 - Alternate appraoch of using **MobileNetV3** was also considered but since there was a paper proving the efficiency of **InceptionV3*, the model was developed using **InceptionV3**
 - In the case of **MobileNetV3** proving to be better in the future the model may be changed
