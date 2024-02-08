@@ -136,7 +136,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 **Demo Video Link:** https://drive.google.com/file/d/1QbBXf1hAU8UKqL37foYrJdX55Z8PeKdu/view?usp=sharing
 
-**Link to **Evaluation.py:(Rendering Error Precaution)** https://colab.research.google.com/drive/1lBUDWUYHO-BdvGv6zRs_F3EOMuU9IiW1?usp=sharing
+**Link To Evaluation.py:(Rendering Error Precaution)** https://colab.research.google.com/drive/1lBUDWUYHO-BdvGv6zRs_F3EOMuU9IiW1?usp=sharing
 
 1. Upload test folder and trained model to google drive
 2. Open evaluation.ipynb in this repository
@@ -169,6 +169,8 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 | InceptionV3  |   0.5     |   0.5    |   0.5    |
 
 - Proceeded with model as the result was decent on a small dataset
+- The results of the sample traning for **InceptionV3** can be obtained from **TransferLearningBinaryClassifier_2.ipynb(Corresponds to InceptionV3)** notebook.
+- Alternate approach has also been tried using **MobileNetV2** and the results can be obtained from **TransferLearningBinaryClassifier_2.ipynb** notebook. The alternate approach will used in the future if the **InceptionV3** does not show improvement with time 
 
 ## Defining Model
 <a name="section-11"></a>
