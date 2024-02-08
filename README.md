@@ -9,7 +9,7 @@ Welcome to the repository containing the code and resources for a machine learni
 - [Evalutaion Metrics](#section-5)
 - [Dataset](#section-6)
 - [Environment Specifications](#section-7)
-- [Running Setup](#section-8)
+- [Setup](#section-8)
 - [Data Preprocessing](#section-9)
 - [Model Selection](#section-10)
 - [Defining Model](#section-11)
@@ -106,12 +106,29 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 - Hardware Accelerator: T4 GPU
 - Data Storage: Google Drive
 
-## Running Setup
+## Setup
 <a name="section-8"></a>
+### Train the Model
 1. Open Google Drive
 2. Upload the published and unpublished folders containing images
 3. Open Google Colab(Google Drive and Colab must be associated with the same account)
 4. Change the Runtime type to T4 GPU(preferably A100 GPU or V100 GPU)
+
+### Test using the generated model
+
+**Demo Video Link:** https://drive.google.com/file/d/1QbBXf1hAU8UKqL37foYrJdX55Z8PeKdu/view?usp=sharing
+
+1. Upload test folder and trained model to google grive
+2. Open evaluation.ipynb in this repository
+3. Click on Google Colab icon in the evaluation.ipynb file at the top
+4. Make sure Colab and Drive are associated with same account
+5. Connect to hosted run time CPU or GPU
+6. Run the code to mount the drive, give access
+7. Run the python script
+8. Copy and paste the images location from the drive using the folder icon in Colab
+9. Copy and paste the model location similarly
+10. Evaluation.csv file will be generated with name and predicted class in the same location as that of model
+
 
 ## Data Preprocessing
 <a name="section-9"></a>
