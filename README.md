@@ -1,6 +1,7 @@
 # Glomeruli-Binary-Classifier
 Welcome to the repository containing the code and resources for a machine learning model developed for the binary classification of sclerotic and non-sclerotic glomeruli.
-**Link to Model**: 
+
+**Link to Model**: https://drive.google.com/file/d/1lU7tSR9nC7zRwx-WGo7CWdsZEPBPaOkH/view?usp=sharing
 
 ## Table of Contents
 - [Medical Context](#section-1)
@@ -114,6 +115,8 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 **Demo Video Link:** https://drive.google.com/file/d/1pQJrc9We7lSXpceHoV6mI6GINRkbpvx4/view?usp=sharing
 
+**Link To Notebook for Training:(Rendering Error Precaution)** https://colab.research.google.com/drive/11Xhi07Ws3Xzx8C3yLzxYEwuxDDEOUAvt?usp=sharing
+
 1. Upload the Data folder to google drive
 2. The data folder should have two folders for **globally_sclerotic** and **non_globally_sclerotic** images
 3. Open **BinaryGlomeruliClassifier_.ipynb** and click on **Open in Colab** at the top of the page
@@ -133,6 +136,8 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 **Demo Video Link:** https://drive.google.com/file/d/1QbBXf1hAU8UKqL37foYrJdX55Z8PeKdu/view?usp=sharing
 
+**Link to **Evaluation.py:(Rendering Error Precaution)** https://colab.research.google.com/drive/1lBUDWUYHO-BdvGv6zRs_F3EOMuU9IiW1?usp=sharing
+
 1. Upload test folder and trained model to google grive
 2. Open evaluation.ipynb in this repository
 3. Click on Google Colab icon in the evaluation.ipynb file at the top
@@ -143,7 +148,6 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 8. Copy and paste the images location from the drive using the folder icon in Colab
 9. Copy and paste the model location similarly
 10. Evaluation.csv file will be generated with name and predicted class in the same location as that of model
-
 
 ## Data Preprocessing
 <a name="section-9"></a>
@@ -157,23 +161,20 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Model Selection
 <a name="section-10"></a>
 - A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli was sampled from original dataset for testing to select model. 
-- Two pretrained CNN models were considered for transfer learning and fine tuning:
-  1. MobileNetV2
-  2. InceptionV3
+- InceptionV3 was considered for transfer learning and fine tuning:
 - The following were the results of training and testing the model using sampled training and testing data before and after fine tuning:
 
 | Model        | Precision | Accuracy | F1 Score |
 |--------------|-----------|----------|----------|
-| MobileNetV2  |   0.65    |   0.68   |   0.66   |
 | InceptionV3  |   0.5     |   0.5    |   0.5    |
 
-- Since the **MobileNetV2** perforemed better than **InceptionV3**, it has been chose as the model for the binary classification.
+- Proceeded with model as the result was decent on a small dataset
 
 ## Defining Model
 <a name="section-11"></a>
 - Input Image Shape = [160, 160, 3]
 - Batch Size = 32
-- Loaded MobileNetV2 ,since showed better results in the terms of the F1 score on sampled data
+- Loaded InceptionV3 ,since showed better results in the terms of the F1 score on sampled data
 
 ## Training Model
 <a name="section-12"></a>
@@ -188,7 +189,6 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 - The validation metrics are better becasue the internal layers like batch normalization affect accuracy during training
 <img width="713" alt="Screenshot 2024-02-07 at 8 22 37 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/d31ff20f-1ca3-4624-8072-1b45206df197">
-
 
 ## Fine Tuning
 <a name="section-13"></a>
@@ -220,7 +220,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Results
 <a name="section-15"></a>
-
+The InceptionV3 modle gave the F1 Score as 
 
 ## Abbreviations
 <a name="section-16"></a>
