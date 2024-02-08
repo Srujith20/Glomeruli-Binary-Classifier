@@ -162,7 +162,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 <a name="section-10"></a>
 - A sample folder consisting of 150 globally_scloretic_glomeruli and 150 non_globally_scloretic_glomeruli was sampled from original dataset for testing to select model 
 - InceptionV3 was considered for transfer learning and fine tuning
-- The following were the results of training and testing the model using sampled training and testing data before and after fine tuning:
+- The following were the results of training and testing the model using sampled training and testing data
 
 | Model        | Precision | Accuracy | F1 Score |
 |--------------|-----------|----------|----------|
