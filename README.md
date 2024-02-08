@@ -1,5 +1,6 @@
 # Glomeruli-Binary-Classifier
 Welcome to the repository containing the code and resources for a machine learning model developed for the binary classification of sclerotic and non-sclerotic glomeruli.
+**Link to Model**: 
 
 ## Table of Contents
 - [Medical Context](#section-1)
@@ -126,7 +127,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
     - **original_sclerotic_data_dir:** Point to folder containing **globally_sclerotic** images
     - **original_non_sclerotic_data_dir:** Point to folder containing **non_globally_sclerotic** images
 10. Click **Run all** under **Run Time**
-11. The model will be saved to root of drive under the name **mobilenet_glomeruli_classifier**
+11. The model will be saved to root of drive under the name **mobilenetv2_glomeruli_classifier**
 
 ### Test using the generated model
 
