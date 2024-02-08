@@ -15,7 +15,7 @@ Welcome to the repository containing the code and resources for a machine learni
 - [Defining Model](#section-11)
 - [Training Model](#section-12)
 - [Fine Tuning](#section-13)
-- [Testing and Performance](#section-14)
+- [Testing and Evaluation](#section-14)
 - [Results](#section-15)
 - [Abbreviations](#section-16)
 - [Resources](#section-17)
@@ -181,24 +181,45 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 - Added dense layer which sets to 1, indicating that it will produce a single prediction value per image in the batch
 - Compiled the model
 - Ran the model to fit the dataset
-- Evaluaed the training and validation accuracy/loss
+- Evaluated the training and validation accuracy/loss
   
 ### Training Evaluation Graphs 
 
 - The validation metrics are better becasue the internal layers like batch normalization affect accuracy during training
-  
-<img width="919" alt="Screenshot 2024-02-07 at 8 06 08 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/3d597377-fc4c-4705-881c-d462c613fea3">
+<img width="713" alt="Screenshot 2024-02-07 at 8 22 37 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/d31ff20f-1ca3-4624-8072-1b45206df197">
+
 
 ## Fine Tuning
 <a name="section-13"></a>
 - Unfreezed the base model to force the weights to be tuned from generic feature maps to features associated specifically with the dataset
-- Compiled and ran the model again
+- Compiled the model again
+  
+### Model Summary
+<img width="579" alt="Screenshot 2024-02-07 at 8 14 37 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/e458a876-3c3d-459d-98cf-0b775e652700">
 
-## Testing and performace
+### Fine Tuned Training Evaluation Graphs
+
+- There is a possiblity of overfiiting as the dataset in consideration is much smaller than the MobileNetV2
+<img width="713" alt="Screenshot 2024-02-07 at 8 17 50 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/0b6f78ae-4305-4985-a6fe-4d066a072f87">
+
+## Testing and Evaluation 
 <a name="section-13"></a>
+
+###Testing Results
+<img width="855" alt="Screenshot 2024-02-07 at 8 24 31 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/16afd853-6b7a-433d-adf4-0eb2f84c4050">
+
+###Evalutaion
+
+####Confusion Matrix
+- The false positives for sclerotic can be attributed to lack of enough data
+<img width="550" alt="Screenshot 2024-02-07 at 8 26 38 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/f9c0681d-1c86-4f38-a8e6-edcaad63dbe6">
+
+####Metrics
+<img width="260" alt="Screenshot 2024-02-07 at 8 28 28 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/b0c1faf2-7486-4168-b668-1b4c2276a92d">
 
 ## Results
 <a name="section-15"></a>
+
 
 ## Abbreviations
 <a name="section-16"></a>
