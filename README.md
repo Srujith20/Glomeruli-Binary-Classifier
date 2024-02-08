@@ -1,5 +1,5 @@
 # Glomeruli-Binary-Classifier
-Welcome to the repository containing the code and resources for a machine learning model developed for the binary classification of sclerotic and non-sclerotic glomeruli.
+Welcome to the repository containing the code and resources for a machine-learning model developed for the binary classification of sclerotic and non-sclerotic glomeruli.
 
 **Link to Model**: https://drive.google.com/file/d/1lU7tSR9nC7zRwx-WGo7CWdsZEPBPaOkH/view?usp=sharing
 
@@ -60,10 +60,10 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ## Approach
 <a name="section-4"></a>
-### Intial Model Selection 
+### Initial Model Selection 
 #### CNN MODEL OF INCEPTION V3
 - Offers simple configuration [1](#ref-1)
-- Offers possibility to import pre-trained models for partial setup [1](#ref-1)
+- Offers the possibility to import pre-trained models for partial setup [1](#ref-1)
 - Eradicates the need to identify features [1](#ref-1)
 - Offers dimensional reduction which reduces the computation load
 - Showed a better μF1 Score compared to other models in the published models above
@@ -90,11 +90,11 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 **Influencing Factors**
 **False Positive Results**: Low precision leads to a higher number of false positives, where the model incorrectly identifies individuals as having a disease or condition when they do not. This can result in unnecessary anxiety and stress for patients, as well as unnecessary follow-up tests, treatments, or interventions. 
 
-**False Negative Results**: Low recall results in a higher number of false negatives, where the model fails to identify individuals who actually have a disease or condition. This can lead to missed diagnoses, delayed treatment, and progression of the disease, potentially resulting in poorer patient outcomes and decreased quality of life.
+**False Negative Results**: Low recall results in a higher number of false negatives, where the model fails to identify individuals who have a disease or condition. This can lead to missed diagnoses, delayed treatment, and progression of the disease, potentially resulting in poorer patient outcomes and decreased quality of life.
 
-- Hence, it is essential to maintain balance between the aforementioned factors. 
+- Hence, it is essential to maintain a balance between the aforementioned factors. 
 
-- F1 score satisfies the requirement and hence it was selected as the evalutaion metric.
+- F1 score satisfies the requirement and hence it was selected as the evaluataion metric.
 
 ## Dataset
 <a name="section-6"></a>
@@ -103,7 +103,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 | Globally Sclerotic     | 1504        |
 | Non-Globally Sclerotic | 4704        |
 
-## Enviroment Specification
+## Environment Specification
 <a name="section-7"></a>
 - Environment: Google Colab
 - Hardware Accelerator: T4 GPU
@@ -117,20 +117,20 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 **Link To Notebook for Training:(Rendering Error Precaution)** https://colab.research.google.com/drive/11Xhi07Ws3Xzx8C3yLzxYEwuxDDEOUAvt?usp=sharing
 
-1. Upload the Data folder to google drive
+1. Upload the Data folder to Google Drive
 2. The data folder should have two folders for **globally_sclerotic** and **non_globally_sclerotic** images
 3. Open **BinaryGlomeruliClassifier_.ipynb** and click on **Open in Colab** at the top of the page
-4. Make sure Colab and drive are associated with the same account
+4. Make sure Colab and Drive are associated with the same account
 5. Connect to a hosted runtime preferably GPU 
 6. Run cell under **Setup**
 7. Run cell under **Mounting Drive**
-8. Give permissions to Colab to access drive
+8. Permit Colab to access Drive
 9. Change paths under **Creating Train, Validate and Test Folders** for:
     - **original_dataset_dir:** Point to folder containing **globally_sclerotic** and **non_globally_sclerotic** images
     - **original_sclerotic_data_dir:** Point to folder containing **globally_sclerotic** images
     - **original_non_sclerotic_data_dir:** Point to folder containing **non_globally_sclerotic** images
 10. Click **Run all** under **Run Time**
-11. The model will be saved to root of drive under the name **mobilenetv2_glomeruli_classifier**
+11. The model will be saved to the root of the Drive under the name **mobilenetv2_glomeruli_classifier**
 
 ### Test using the generated model
 
@@ -138,10 +138,10 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 **Link to **Evaluation.py:(Rendering Error Precaution)** https://colab.research.google.com/drive/1lBUDWUYHO-BdvGv6zRs_F3EOMuU9IiW1?usp=sharing
 
-1. Upload test folder and trained model to google grive
+1. Upload test folder and trained model to google drive
 2. Open evaluation.ipynb in this repository
 3. Click on Google Colab icon in the evaluation.ipynb file at the top
-4. Make sure Colab and Drive are associated with same account
+4. Make sure Colab and Drive are associated with the same account
 5. Connect to hosted run time CPU or GPU
 6. Run the code to mount the drive, give access
 7. Run the python script
@@ -155,8 +155,8 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 - Split the entire data into train(70%), test(15%) and validate(15%) folders
 - Each folder above contains both globally_scloretic and non_globally_scloretic folders as classes with images count depending on the aforementioned split on their original folders
 - Configured the dataset for performance by utilising buffered prefetching for loading images from disc without causing I/O blocks
-- Augmented data to introduce diveristy by applying realistic transformations to reduce overfitting
-- Rescaled pixel values to suit the pretrained models
+- Augmented data to introduce diverisity by applying realistic transformations to reduce overfitting
+- Rescaled pixel values to suit the pre-trained models
 
 ## Model Selection
 <a name="section-10"></a>
@@ -179,7 +179,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Training Model
 <a name="section-12"></a>
 - Freezed the convolutional base
-- Added gloabl average pooling to feature maps which resulted in single 1280-element vector per image in the batch
+- Added global average pooling to feature maps which resulted in single 1280-element vector per image in the batch
 - Added dense layer which sets to 1, indicating that it will produce a single prediction value per image in the batch
 - Compiled the model
 - Ran the model to fit the dataset
@@ -187,7 +187,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
   
 ### Training Evaluation Graphs 
 
-- The validation metrics are better becasue the internal layers like batch normalization affect accuracy during training
+- The validation metrics are better because the internal layers like batch normalization affect accuracy during training
 <img width="713" alt="Screenshot 2024-02-07 at 8 22 37 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/d31ff20f-1ca3-4624-8072-1b45206df197">
 
 ## Fine Tuning
@@ -200,7 +200,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 
 ### Fine Tuned Training Evaluation Graphs
 
-- There is a possiblity of overfiiting as the dataset in consideration is much smaller than the MobileNetV2
+- There is a possibility of overfiting as the dataset in consideration is much smaller than the MobileNetV2
 <img width="713" alt="Screenshot 2024-02-07 at 8 17 50 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/0b6f78ae-4305-4985-a6fe-4d066a072f87">
 
 ## Testing and Evaluation 
@@ -209,18 +209,17 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ### Testing Results
 <img width="855" alt="Screenshot 2024-02-07 at 8 24 31 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/16afd853-6b7a-433d-adf4-0eb2f84c4050">
 
-### Evalutaion
+### Evaluataion
 
 #### Confusion Matrix
 - The false positives for sclerotic can be attributed to lack of enough data
 <img width="550" alt="Screenshot 2024-02-07 at 8 26 38 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/f9c0681d-1c86-4f38-a8e6-edcaad63dbe6">
 
-#### Metrics
-<img width="260" alt="Screenshot 2024-02-07 at 8 28 28 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/b0c1faf2-7486-4168-b668-1b4c2276a92d">
-
 ## Results
 <a name="section-15"></a>
-The InceptionV3 modle gave the F1 Score as 
+#### Metrics
+- Further addition of layers, data may help in improving the F1 score. I plan to add layers to try to improve the F1 metric
+<img width="260" alt="Screenshot 2024-02-07 at 8 28 28 PM" src="https://github.com/Srujith20/Glomeruli-Binary-Classifier/assets/66065988/b0c1faf2-7486-4168-b668-1b4c2276a92d">
 
 ## Abbreviations
 <a name="section-16"></a>
