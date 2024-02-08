@@ -109,10 +109,23 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Setup
 <a name="section-8"></a>
 ### Train the Model
-1. Open Google Drive
-2. Upload the published and unpublished folders containing images
-3. Open Google Colab(Google Drive and Colab must be associated with the same account)
-4. Change the Runtime type to T4 GPU(preferably A100 GPU or V100 GPU)
+
+**Demo Video Link:** https://drive.google.com/file/d/1pQJrc9We7lSXpceHoV6mI6GINRkbpvx4/view?usp=sharing
+
+1. Upload the Data folder to google drive
+2. The data folder should have two folders for **globally_sclerotic** and **non_globally_sclerotic** images
+3. Open **BinaryGlomeruliClassifier_.ipynb** and click on **Open in Colab** at the top of the page
+4. Make sure Colab and drive are associated with the same account
+5. Connect to a hosted runtime preferably GPU 
+6. Run cell under **Setup**
+7. Run cell under **Mounting Drive**
+8. Give permissions to Colab to access drive
+9. Change paths under **Creating Train, Validate and Test Folders** for:
+    - **original_dataset_dir:** Point to folder containing **globally_sclerotic** and **non_globally_sclerotic** images
+    - **original_sclerotic_data_dir:** Point to folder containing **globally_sclerotic** images
+    - **original_non_sclerotic_data_dir:** Point to folder containing **non_globally_sclerotic** images
+10. Click **Run all** under **Run Time**
+11. The model will be saved to root of drive under the name **mobilenet_glomeruli_classifier**
 
 ### Test using the generated model
 
@@ -172,7 +185,7 @@ Non-sclerotic glomeruli, on the other hand, represent glomeruli without the hard
 ## Fine Tuning
 <a name="section-13"></a>
 - Unfreezed the base model to force the weights to be tuned from generic feature maps to features associated specifically with the dataset
-- Compiled and ran the model model again
+- Compiled and ran the model again
 
 ## Testing and performace
 <a name="section-13"></a>
